@@ -1,0 +1,27 @@
+
+    name <input type="text"><br>
+    passwd <input type="password"><br>
+    city <select>
+        <option value="chn">chennai</option>
+        <option value="bglr">bengaluru</option>
+        <option value="coc">cochin</option>
+    </select><br>
+    gender <input type="radio" name="gen">male <input type="radio" name="gen">female <br>
+    
+    address <textarea cols="30" rows="3"></textarea> <br>
+    age <input type="number"> <br>
+    dob <input type="date" ><br>
+    <input type="button" value="Save">
+
+
+    <table>
+        <tr></tr>
+    </table>
+
+    <button (click)="backtohome()">go main page</button>
+    <br>
+ 
+
+    <h1>services work</h1>
+    items to services <input type="text" [(ngModel)]="item">
+    <button (click)="savetoservice()">add items</button>

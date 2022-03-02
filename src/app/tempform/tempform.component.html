@@ -1,0 +1,18 @@
+
+<form #prodForm="ngForm" (ngSubmit)="saveproducts(prodForm)">
+    <table>
+        <tr> <td>product id</td>  <td><input type="text" name="prodid" ngModel required minlength="2" maxlength="7"> </td> </tr>
+
+        <tr> <td>product Name</td>  <td><input type="text" name="prodname" ngModel pattern="^[a-zA-Z]+$"></td> </tr>
+
+        <tr> <td>product price</td>  <td><input type="text" name="price" ngModel pattern="^[0-9]+$" required></td> </tr>
+
+        <tr> <td>supplier email</td>  <td><input type="text" name="supplieremail" ngModel required email></td> </tr>
+
+        <tr><td> </td><td><input type="reset" value="reset"></td> <td><input type="submit" value="save product" [disabled]="!prodForm.valid"></td></tr>
+    </table>
+<pre> Form valid {{prodForm.valid}}</pre>
+<pre>Form Modified {{prodForm.touched }}</pre>
+<pre> Form in valid {{ prodForm.invalid}}</pre>
+<pre>Form valid {{prodForm.value | json}}</pre>
+</form>

@@ -1,0 +1,93 @@
+<!-- <h1>{{title}}</h1>
+<h3>visited @{{currDate}}</h3>
+<br>
+<hr><hr>
+<b><h1>our websites consists of:</h1>{{features}}</b>
+<br><br><br>
+<h1>my info:</h1>
+<div>
+    name: {{studentinfo.studname}}<br>
+    your rollname: {{studentinfo.rollno}}<br>
+    <address>{{studentinfo.address}}</address>
+</div>
+
+<div>
+    features:
+<select name="features" id="fearures">
+        <option *ngFor = "let feat of features">
+             {{feat}}
+        </option>
+</select>
+</div>
+
+your message:<input type="text" [(ngModel)]="mymessage"><br>
+your message {{mymessage}}
+<button (click)="onclick()">click to get result!</button>
+
+<div>
+    <b>features:</b>
+    <ul>
+        <li *ngFor = "let feat of features">
+             {{feat}}
+        </li>
+    </ul>
+</div>
+
+
+
+add new fearures:
+<input type="text" [(ngModel)]="newfeat"><button (click)="addnewfeat()">add feature</button>
+ -->
+
+<!-- 
+
+<p>login here</p>
+<table>
+    <tr>
+        <td>Id</td> <td><input type="text" [(ngModel)]="name"></td>
+    </tr>
+
+    <tr>
+        <td>password</td> <td><input type="text" [(ngModel)]="pass"></td>
+    </tr>
+
+    <tr>
+        <td></td> <td><input type="button" value="login" (click)="validateuser()" ></td>
+    </tr>
+</table>
+
+
+property binding -->
+<!-- <p [style]="color">my background will change</p>
+<input type="button" value="green" (click)="green()">
+<input type="button" value="yellow" (click)="yellow()"> -->
+
+<h1>editing {{prodidvar}}</h1>
+<table>
+    <tr><td>product id</td> <td><input type="text" [(ngModel)]="p.prodid"></td></tr>
+    <tr><td>product name</td> <td><input type="text" [(ngModel)]="p.prodname"></td></tr>
+    <tr><td>price</td> <td><input type="text" [(ngModel)]="p.price"></td></tr>
+    <tr><td>category</td><td>
+        <select [(ngModel)]="p.category">
+            <option *ngFor="let c of categories" value="{{c}}">{{c}}</option>
+
+        </select></td></tr>
+        <tr><td></td><td><button (click)="saveproduct()">save </button></td> </tr>
+</table>
+
+<br>
+<h5>product list</h5>
+<table border="1">
+    <thead style="background-color: greenyellow;">
+        <th>product id</th> <th>product name</th><th>price</th><th>category</th><th>action</th><th>modify prod</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let prod of prodarray; let i=index">
+            <td>{{prod.prodid}}</td> <td>{{prod.prodname | uppercase}}</td>
+            <td>{{prod.price}}</td> <td>{{prod.category}}</td>
+            <td><input type="button" value="delete" (click)="deleteproduct(i)"></td>
+            <td><a [routerLink]="['/editprod',prod.prodid]">edit</a></td>
+        </tr>
+
+    </tbody>
+</table>

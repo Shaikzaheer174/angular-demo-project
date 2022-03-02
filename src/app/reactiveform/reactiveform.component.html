@@ -1,0 +1,13 @@
+<p>reactiveform works!</p>
+<form [formGroup]="prodForm" (ngSubmit)="saveProduct()">
+  <table>
+      <tr><td>Product ID   </td> <td> <input type="text" formControlName="prodid">   </td> </tr>
+      <tr><td>Product Name </td> <td> <input type="text" formControlName="prodname"> </td> </tr>
+      <tr><td>Product Price</td> <td> <input type="text" formControlName="price" >   </td> </tr>
+      <tr><td>Category     </td> <td> <input type="text" formControlName="category"> </td> </tr>
+      <tr><td>phone number  </td> <td> <input type="text" formControlName="phonenumber">   </td> </tr>
+
+      <tr><td> <input type="reset" value="Reset"></td><td> <input type="submit" value="Save Product"
+         [disabled]="!prodForm.valid"></td></tr>
+  </table>
+</form>

@@ -1,0 +1,74 @@
+<!-- <h1>hello world {{title}}</h1>
+
+<div>  
+    name: {{name}} <br>
+    place: {{place}}
+
+</div>
+
+<div>
+    <app-login></app-login>
+</div>
+
+<div>
+    <app-profile></app-profile>
+</div>
+
+
+<br>
+<br>
+<hr>
+
+<div>
+    <h1>SIGN-UP here</h1>
+    <app-signup></app-signup>
+</div> -->
+<!-- <app-task></app-task> -->
+
+<!-- <app-product></app-product> -->
+
+<!-- <app-login></app-login> --> 
+
+<!-- <app-tempform></app-tempform> -->
+<!-- <app-reactiveform></app-reactiveform> -->
+
+
+
+
+
+
+
+<h1>my application</h1>
+<hr/>
+<div>
+    <a routerLink="/login">login</a> |
+    <a routerLink="/signup">signup</a> | 
+    <a routerLink="/task">task</a> |
+    <a routerLink="/tempform">tempform</a> |
+    <a routerLink="/reactiveform">reactiveform</a> |
+    <a routerLink="/product">product</a>
+</div>
+
+<div>
+    <router-outlet></router-outlet>
+</div>
+
+
+<!--  -->
+
+<app-child [childmessage]="messagetosend"></app-child>
+
+<app-child (messageeEvent)="receivemessage($event)"></app-child>
+
+
+
+
+
+
+
+
+
+
+
+
+
